@@ -9,7 +9,7 @@ pipeline{
       // Stage: Build Docker image
       steps{
         script{
-          sh 'docker build -t ellaadeka/flask-app-deploy .'
+          bat 'docker build -t ellaadeka/flask-app-deploy .'
         }
       }
     }
@@ -20,11 +20,11 @@ pipeline{
         script{
           withCredentials([string(credentialsId: 'dockerhubsecrets', variable: 'dockerhubpwd')]) {
             // log in to Docker hub
-            sh "docker login -u ellaadeka -p ${dockerhubpwd}"
+            bat 'docker login -u ellaadeka -p ${dockerhubpwd}'
           }
           // Push docker image to Dockerhub
           // must be tagged with docker username
-          sh 'docker push ellaadeka/flask-app-deploy'
+          bat 'docker push ellaadeka/flask-app-deploy'
         }
       }
     }
