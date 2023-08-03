@@ -1,0 +1,70 @@
+# -*- conf -*-
+# References:
+# - https://stackoverflow.com/a/4695615/1219634
+# - https://stackoverflow.com/a/38297609/1219634
+
+# Build Artifacts
+dist/
+build/
+
+# Compiled Python Files
+*.pyc
+pycache/
+__pycache__
+.pytest_cache
+
+# Virtual Environment
+venv/
+*.env
+
+# Editor and IDE files
+.vscode/
+
+# Cache
+caches/
+
+# Fingerprint records
+fingerprints/
+
+# Working directories
+workspace/
+
+# Secret files
+secrets/
+secret.*
+*.enc
+*.key
+users/
+
+# State files
+*.state
+
+# Updates
+updates/
+
+# Extracted jenkins.war
+war/
+
+# Job state files
+builds/
+nextBuildNumber
+
+# Indexing
+indexing/
+
+# Log files
+logs/
+*.log
+
+# Help files
+help/
+
+# Miscellaneous litter
+*.bak
+.nfs*
+.lastStarted
+.owner
+.timestamp
+queue.xml
+downloads/
+jenkins.war
