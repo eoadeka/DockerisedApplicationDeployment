@@ -20,7 +20,7 @@ pipeline{
         script{
           withCredentials([string(credentialsId: 'dockerhubsecrets', variable: 'dockerhubpwd')]) {
             // log in to Docker hub
-            bat 'docker login -u ellaadeka -p ${dockerhubpwd}'
+            bat "docker login -u ellaadeka -p ${dockerhubpwd}"
           }
           // Push docker image to Dockerhub
           // must be tagged with docker username
